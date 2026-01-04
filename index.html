@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertex8</title>
+    <meta name="description" content="Vertex8 - Enterprise Solutions">
+    
+    <!-- Pico.css -->
+    <link rel="stylesheet" href="assets/css/pico.min.css">
+    
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="container">
+        <nav>
+            <ul>
+                <li>
+                    <img src="assets/img/logo-bright.svg" alt="Vertex8 Logo" class="logo logo-bright">
+                    <img src="assets/img/logo-dark.svg" alt="Vertex8 Logo" class="logo logo-dark">
+                </li>
+            </ul>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#contact" role="button">Contact</a></li>
+                <li>
+                    <a href="#" id="theme-toggle" aria-label="Toggle Theme">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="hero">
+            <hgroup>
+                <h1>Welcome to Vertex8</h1>
+                <p>Building the future of enterprise software.</p>
+            </hgroup>
+            <p>We are currently setting up our digital presence. Stay tuned for more information based on our Business Plan.</p>
+        </section>
+    </main>
+
+    <footer class="container">
+        <small>&copy; 2026 Vertex8. All rights reserved.</small>
+    </footer>
+
+    <script>
+        // Simple theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.querySelector('html');
+        
+        // Check for saved theme
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', currentTheme);
+        
+        themeToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
+</body>
+</html>

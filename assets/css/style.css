@@ -1,0 +1,84 @@
+/* Metropolis Font Face */
+@font-face {
+    font-family: 'Metropolis';
+    src: url('../fonts/Metropolis-Regular.woff2') format('woff2'),
+         url('../fonts/Metropolis-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('../fonts/Metropolis-Bold.woff2') format('woff2'),
+         url('../fonts/Metropolis-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('../fonts/Metropolis-Light.woff2') format('woff2'),
+         url('../fonts/Metropolis-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+:root {
+    --font-family: 'Metropolis', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    
+    /* PicoCSS Primary color overrides */
+    /* Light Mode (default) */
+    --pico-primary: #144D52;
+    --pico-primary-hover: #0D3539;
+    --pico-primary-focus: rgba(20, 77, 82, 0.125);
+    --pico-primary-inverse: #fff;
+}
+
+/* Dark Mode override */
+[data-theme="dark"],
+:root:not([data-theme="light"]) {
+    --pico-primary: #31B8C6;
+    --pico-primary-hover: #268D96;
+    --pico-primary-focus: rgba(49, 184, 198, 0.125);
+    --pico-primary-inverse: #000;
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+header {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.logo {
+    height: 80px;
+}
+
+[data-theme="dark"] .logo-bright,
+:root:not([data-theme="light"]) .logo-bright {
+    display: none;
+}
+
+[data-theme="light"] .logo-dark {
+    display: none;
+}
+
+:root[data-theme="light"] .logo-dark {
+    display: none;
+}
+
+/* Helper to show/hide logos based on theme */
+.logo-dark { display: none; }
+[data-theme="dark"] .logo-dark { display: inline-block; }
+[data-theme="dark"] .logo-bright { display: none; }
+:root:not([data-theme]) .logo-bright { display: inline-block; } /* default to light or browser pref? Pico handles this */
+
+/* Manual toggle override for simplicity if we add a theme switcher later */
+.theme-switcher {
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: var(--pico-secondary-background);
+}
