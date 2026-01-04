@@ -9,10 +9,26 @@
 
 @font-face {
     font-family: 'Metropolis';
+    src: url('../fonts/Metropolis-RegularItalic.woff2') format('woff2'),
+        url('../fonts/Metropolis-RegularItalic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Metropolis';
     src: url('../fonts/Metropolis-Bold.woff2') format('woff2'),
         url('../fonts/Metropolis-Bold.otf') format('opentype');
     font-weight: 700;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('../fonts/Metropolis-BoldItalic.woff2') format('woff2'),
+        url('../fonts/Metropolis-BoldItalic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
 }
 
 @font-face {
@@ -23,32 +39,40 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Metropolis';
+    src: url('../fonts/Metropolis-LightItalic.woff2') format('woff2'),
+        url('../fonts/Metropolis-LightItalic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+}
+
 :root {
-    --font-family: 'Metropolis', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-family: 'Metropolis', "Roboto", Arial, sans-serif;
 
-    /* PicoCSS Primary color overrides using HSL for framework internal scaling */
+    --vertex-light-primary: #144D52;
+    --vertex-light-inverse: #1F2121;
+    --vertex-dark-primary: #31B8C6;
+    --vertex-dark-inverse: #fff;
+
+    --vertex-font-bold: 700;
+    --vertex-font-regular: 400;
+    --vertex-font-light: 300;
+
     /* Light Mode (default) - Teal #144D52 */
-    --pico-primary-h: 185;
-    --pico-primary-s: 61%;
-    --pico-primary-l: 20%;
-    --pico-primary: hsl(var(--pico-primary-h), var(--pico-primary-s), var(--pico-primary-l));
-
-    --pico-primary-hover: #31B8C6;
-    --pico-primary-focus: rgba(20, 77, 82, 0.125);
-    --pico-primary-inverse: #fff;
+    --pico-primary: var(--vertex-light-primary);
+    --pico-primary-hover: var(--vertex-light-primary);
+    --pico-primary-focus: #144d5220;
+    --pico-primary-inverse: var(--vertex-light-inverse);
 }
 
 /* Dark Mode override - Cyan #31B8C6 */
 [data-theme="dark"],
 :root:not([data-theme="light"]) {
-    --pico-primary-h: 185;
-    --pico-primary-s: 60%;
-    --pico-primary-l: 48%;
-    --pico-primary: hsl(var(--pico-primary-h), var(--pico-primary-s), var(--pico-primary-l));
-
-    --pico-primary-hover: #144D52;
-    --pico-primary-focus: rgba(49, 184, 198, 0.125);
-    --pico-primary-inverse: #1F2121;
+    --pico-primary: var(--vertex-dark-primary);
+    --pico-primary-hover: var(--vertex-dark-primary);
+    --pico-primary-focus: #31b8c620;
+    --pico-primary-inverse: var(--vertex-dark-inverse);
 }
 
 html {
