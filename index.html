@@ -30,7 +30,8 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#use-cases">Showcases</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact" role="button">Free Consultation</a></li>
+                <li><a href="#contact" role="button" data-tooltip="It's free!" data-placement="bottom">Consult us</a>
+                </li>
                 <li>
                     <a href="#" id="theme-toggle" aria-label="Toggle Theme">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -49,11 +50,12 @@
         <!-- Hero Section -->
         <section id="welcome">
             <hgroup>
-                <h1>Where complex user needs meet elegant software solutions.</h1>
+                <h1>Where complex user needs me<span class="primary">et elegant software solutions.</span></h1>
                 <p>AI-powered product strategy and end-to-end services tailored for your unique workflows.</p>
             </hgroup>
             <footer>
-                <a href="#contact" role="button" data-tooltip="It's free!">Book Free Consultation</a>
+                <a href="#contact" role="button" data-tooltip="Tell us about your needs!" data-placement="bottom">Book
+                    Free Consultation</a>
             </footer>
         </section>
 
@@ -168,7 +170,7 @@
                     </header>
                     <div>
                         <h3>Cyrille Berliat</h3>
-                        <p><strong>Founder & Principal</strong></p>
+                        <p>Founder & Principal</p>
                         <p>With 15 years of industry experience, including 12 years at Google across engineering and
                             product management, Cyrille brings world-class expertise to local challenges.</p>
                     </div>
@@ -177,25 +179,6 @@
                             designers to support our growing client base in the AI sector.</p>
                     </div>
                 </article>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Get in Touch</h2>
-            <p>Targeting English-speaking SMEs in Shanghai, Vertex8 is your partner in China's booming AI sector. Find
-                us via <strong>neoBay</strong>, <strong>Orbit</strong>, or reach out directly.</p>
-            <form>
-                <div class="grid">
-                    <input type="text" name="firstname" placeholder="Name" aria-label="Name" required>
-                    <input type="email" name="email" placeholder="Email address" aria-label="Email address" required>
-                </div>
-                <textarea name="message" placeholder="How can we help?" aria-label="Message"></textarea>
-                <button type="submit">Send Inquiry</button>
-            </form>
-            <div style="text-align: center; margin-top: 1rem;">
-                <a href="https://linkedin.com" target="_blank">LinkedIn</a> • <a href="mailto:hello@vertex8.com">Email
-                    Us</a>
             </div>
         </section>
     </main>
@@ -218,21 +201,6 @@
             const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
             html.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
-        });
-
-        // Handle nav clicks to account for fixed header
-        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 60, // Header height offset
-                        behavior: 'smooth'
-                    });
-                }
-            });
         });
     </script>
 </body>

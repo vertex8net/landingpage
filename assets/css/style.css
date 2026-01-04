@@ -111,6 +111,11 @@ body>header {
     opacity: 0.95;
 }
 
+h1,
+h2 {
+    margin-bottom: calc(var(--pico-typography-spacing-vertical) * 1.5);
+}
+
 /* Article headers layout */
 article>header {
     position: static;
@@ -133,6 +138,7 @@ section {
     justify-content: center;
     scroll-snap-align: start;
     padding: 2rem 0;
+    padding-top: 8vh;
     box-sizing: border-box;
 }
 
@@ -142,6 +148,10 @@ main {
 
 .logo {
     height: 60px;
+}
+
+.primary {
+    color: var(--pico-primary);
 }
 
 [data-theme="dark"] .logo-bright,
