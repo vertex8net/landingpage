@@ -194,6 +194,94 @@ main {
     display: inline-block;
 }
 
+/* Hero Logo Animation */
+.logo-animation-container {
+    position: relative;
+    width: 100%;
+    height: 7rem;
+    margin-bottom: 2rem;
+    overflow: visible;
+}
+
+.logo-reveal-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 7.5rem;
+    /* Start small, showing only the 'V' */
+    overflow: hidden;
+    transform: skewX(-23deg);
+    /* Match rotation of the logo stroke */
+    transform-origin: top left;
+    animation: revealLogo 4s linear forwards;
+}
+
+.logo-full {
+    height: 100%;
+    width: auto;
+    max-width: none;
+    transform: skewX(23deg);
+    /* Counter-skew to keep logo shape intact */
+    transform-origin: top left;
+}
+
+.v-anim-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    /* Adjusted start */
+    /* Upside down V */
+    animation: moveV 4s linear forwards;
+}
+
+.v-logo-anim {
+    height: 100%;
+    width: auto;
+}
+
+@keyframes revealLogo {
+
+    0%,
+    10% {
+        width: 7.5rem;
+    }
+
+    30% {
+        width: 17.5rem;
+    }
+
+    50% {
+        width: 27.5rem;
+    }
+
+    60%,
+    100% {
+        width: 32.5rem;
+    }
+}
+
+@keyframes moveV {
+
+    0%,
+    10% {
+        transform: scaleY(-1) translateX(4.8rem);
+        opacity: 1;
+    }
+
+    30% {
+        transform: scaleY(-1) translateX(14.8rem);
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        transform: scaleY(-1) translateX(24.8rem);
+        opacity: 0;
+    }
+}
+
 /* Theme switcher icon */
 #theme-toggle {
     cursor: pointer;
