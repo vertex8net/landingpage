@@ -53,28 +53,44 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 }
 
 body {
     font-family: var(--font-family);
-    line-height: 1.6;
+    margin: 0;
 }
 
-header {
+/* Site header fixed at the top */
+body>header {
     padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--pico-background-color);
+    border-bottom: 1px solid var(--pico-muted-border-color);
+    opacity: 0.95;
+}
+
+/* Article headers should not be fixed */
+article>header {
+    position: static;
 }
 
 section {
-    padding: 5rem 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    scroll-snap-align: start;
+    padding: 2rem 0;
+    box-sizing: border-box;
 }
 
-hgroup h1 {
-    font-weight: 700;
-}
-
-hgroup p {
-    font-weight: 300;
-    font-size: 1.25rem;
+main {
+    margin-top: 4rem;
 }
 
 .logo {
@@ -111,12 +127,9 @@ hgroup p {
     display: inline-block;
 }
 
-/* default to light or browser pref? Pico handles this */
-
-/* Manual toggle override for simplicity if we add a theme switcher later */
-.theme-switcher {
+/* Theme switcher icon */
+#theme-toggle {
     cursor: pointer;
-    padding: 0.5rem;
-    border-radius: 50%;
-    background: var(--pico-secondary-background);
+    display: flex;
+    align-items: center;
 }
