@@ -78,6 +78,9 @@
     --pico-primary-background: var(--vertex-dark-primary);
     --pico-primary-focus: #31b8c620;
     --pico-primary-inverse: var(--vertex-dark-inverse);
+
+    background-image: url('../img/background-dark.svg');
+    background-size: cover;
 }
 
 button,
