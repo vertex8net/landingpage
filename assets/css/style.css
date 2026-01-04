@@ -139,10 +139,20 @@ main {
     display: none;
 }
 
-/* Helper to show/hide logos based on theme */
-.logo-dark {
-    display: none;
+.icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 1rem;
+    display: block;
+    /* Use filter to color the SVG if needed, or rely on SVG's stroke="currentColor" if using <object> or similar. 
+       Since we use <img>, we'll use a CSS filter as a fallback for the primary color. */
+    filter: invert(24%) sepia(35%) saturate(1028%) hue-rotate(136deg) brightness(92%) contrast(92%);
 }
+
+[data-theme="dark"] .icon {
+    filter: invert(65%) sepia(61%) saturate(464%) hue-rotate(139deg) brightness(85%) contrast(89%);
+}
+
 
 [data-theme="dark"] .logo-dark {
     display: inline-block;
