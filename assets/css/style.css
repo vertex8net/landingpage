@@ -103,9 +103,19 @@ body>header {
     opacity: 0.95;
 }
 
-/* Article headers should not be fixed */
+/* Article headers layout */
 article>header {
     position: static;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+article>header h3 {
+    margin-bottom: 0;
+    color: var(--pico-primary);
+    font-size: 1.25rem;
 }
 
 section {
@@ -140,10 +150,10 @@ main {
 }
 
 .icon {
-    width: 32px;
-    height: 32px;
-    margin-bottom: 1rem;
-    display: block;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    flex-shrink: 0;
     /* Use filter to color the SVG if needed, or rely on SVG's stroke="currentColor" if using <object> or similar. 
        Since we use <img>, we'll use a CSS filter as a fallback for the primary color. */
     filter: invert(24%) sepia(35%) saturate(1028%) hue-rotate(136deg) brightness(92%) contrast(92%);
