@@ -107,7 +107,7 @@ body>header {
     right: 0;
     z-index: 1000;
     background: var(--pico-background-color);
-    border-bottom: 1px solid var(--pico-muted-border-color);
+    border-bottom: 1px solid var(--pico-primary-inverse);
     opacity: 0.95;
 }
 
