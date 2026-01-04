@@ -154,8 +154,8 @@ main {
     color: var(--pico-primary);
 }
 
-[data-theme="dark"] .logo-bright,
-:root:not([data-theme="light"]) .logo-bright {
+[data-theme="dark"] .logo-light,
+:root:not([data-theme="light"]) .logo-light {
     display: none;
 }
 
@@ -186,11 +186,11 @@ main {
     display: inline-block;
 }
 
-[data-theme="dark"] .logo-bright {
+[data-theme="dark"] .logo-light {
     display: none;
 }
 
-:root:not([data-theme]) .logo-bright {
+:root:not([data-theme]) .logo-light {
     display: inline-block;
 }
 
