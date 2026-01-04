@@ -50,7 +50,7 @@
 :root {
     --font-family: 'Metropolis', "Roboto", Arial, sans-serif;
 
-    --vertex-light-primary: #144D52;
+    --vertex-light-primary: #00897b;
     --vertex-light-inverse: #1F2121;
     --vertex-dark-primary: #31B8C6;
     --vertex-dark-inverse: #fff;
@@ -58,19 +58,24 @@
     --vertex-font-bold: 700;
     --vertex-font-regular: 400;
     --vertex-font-light: 300;
-
-    /* Light Mode (default) - Teal #144D52 */
-    --pico-primary: var(--vertex-light-primary);
-    --pico-primary-hover: var(--vertex-light-primary);
-    --pico-primary-focus: #144d5220;
-    --pico-primary-inverse: var(--vertex-light-inverse);
 }
 
-/* Dark Mode override - Cyan #31B8C6 */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+    --pico-primary: var(--vertex-light-primary);
+    --pico-primary-hover: var(--vertex-light-primary);
+    --pico-primary-hover-background: var(--vertex-dark-primary);
+    --pico-primary-focus: #144d5220;
+    --pico-primary-inverse: var(--vertex-light-inverse);
+    --pico-primary-background: var(--vertex-light-primary);
+}
+
 [data-theme="dark"],
 :root:not([data-theme="light"]) {
     --pico-primary: var(--vertex-dark-primary);
     --pico-primary-hover: var(--vertex-dark-primary);
+    --pico-primary-hover-background: var(--vertex-light-primary);
+    --pico-primary-background: var(--vertex-dark-primary);
     --pico-primary-focus: #31b8c620;
     --pico-primary-inverse: var(--vertex-dark-inverse);
 }
