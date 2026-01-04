@@ -80,6 +80,11 @@
     --pico-primary-inverse: var(--vertex-dark-inverse);
 }
 
+button,
+[role=button] {
+    margin: 0;
+}
+
 html {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
