@@ -51,8 +51,13 @@
     --pico-primary-inverse: #1F2121;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--font-family);
+    line-height: 1.6;
 }
 
 header {
@@ -60,7 +65,16 @@ header {
 }
 
 section {
-    padding: 3rem 0;
+    padding: 5rem 0;
+}
+
+hgroup h1 {
+    font-weight: 700;
+}
+
+hgroup p {
+    font-weight: 300;
+    font-size: 1.25rem;
 }
 
 .logo {
