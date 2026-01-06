@@ -289,3 +289,18 @@ main {
     display: flex;
     align-items: center;
 }
+
+/* Company Name Styling */
+.company_name {
+    font-weight: inherit;
+    display: inline-flex;
+    align-items: baseline;
+}
+
+.company_name .symbol {
+    font-size: 0.8em;
+    position: relative;
+    top: -0.35em;
+    margin-left: 0.05em;
+    font-weight: normal;
+}
