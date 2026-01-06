@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -33,7 +33,9 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#use-cases">Showcases</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact" role="button" data-tooltip="It's free!" data-placement="bottom">Consult us</a>
+                <li><a href="#contact" role="button" data-tooltip="It's free!" data-placement="bottom"><span
+                            class="consult-text-full">Consult us</span><span
+                            class="consult-text-short">Consult</span></a>
                 </li>
                 <li>
                     <a href="#" id="theme-toggle" aria-label="Toggle Theme">
@@ -185,7 +187,7 @@
                     <div>
                         <h4>Cyrille Berliat <a href="https://www.linkedin.com/in/cyrilleberliat/" target="_blank"
                                 rel="noopener noreferrer"
-                                style="display: inline-flex; vertical-align: middle; margin-left: 0.5rem;"><img
+                                style="display: inline-flex; vertical-align: bottom; margin-left: 0.5rem; margin-bottom: 0.1rem;"><img
                                     src="assets/img/icon-linkedin.svg" alt="LinkedIn" class="icon"
                                     style="width: 1.2rem; height: 1.2rem;"></a></h4>
                         <ul>
@@ -225,7 +227,7 @@
         const html = document.querySelector('html');
 
         // Check for saved theme
-        const currentTheme = localStorage.getItem('theme') || 'light';
+        const currentTheme = localStorage.getItem('theme') || 'dark';
         html.setAttribute('data-theme', currentTheme);
 
         themeToggle.addEventListener('click', (e) => {
