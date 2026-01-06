@@ -304,3 +304,22 @@ main {
     margin-left: 0.05em;
     font-weight: normal;
 }
+
+/* Footer Styling */
+footer.container {
+    scroll-snap-align: end;
+    padding: 3rem 0;
+    border-top: 1px solid var(--pico-muted-border-color);
+}
+
+footer .grid>section {
+    margin-bottom: 0;
+    padding: 0;
+    min-height: auto;
+}
+
+footer strong {
+    color: var(--pico-primary);
+    display: block;
+    margin-bottom: 0.5rem;
+}
