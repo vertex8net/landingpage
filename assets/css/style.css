@@ -199,8 +199,10 @@ main {
 .logo-animation-container {
     position: relative;
     width: 100%;
-    height: 7rem;
-    margin-bottom: 2rem;
+    /* Use clamp for responsive scaling without media queries */
+    font-size: clamp(0.5rem, 2.5vw, 1rem);
+    height: 7em;
+    margin-bottom: 2em;
     overflow: visible;
 }
 
@@ -209,7 +211,7 @@ main {
     top: 0;
     left: 0;
     height: 100%;
-    width: 7.5rem;
+    width: 7.5em;
     /* Start small, showing only the 'V' */
     overflow: hidden;
     transform: skewX(-23deg);
@@ -246,42 +248,44 @@ main {
 
     0%,
     10% {
-        width: 7.5rem;
+        width: 7.5em;
     }
 
     30% {
-        width: 17.5rem;
+        width: 17.5em;
     }
 
     50% {
-        width: 27.5rem;
+        width: 27.5em;
     }
 
     60%,
     100% {
-        width: 32.5rem;
+        width: 32.5em;
     }
 }
+
 
 @keyframes moveV {
 
     0%,
     10% {
-        transform: scaleY(-1) translateX(4.8rem);
+        transform: scaleY(-1) translateX(4.8em);
         opacity: 1;
     }
 
     30% {
-        transform: scaleY(-1) translateX(14.8rem);
+        transform: scaleY(-1) translateX(14.8em);
         opacity: 1;
     }
 
     50%,
     100% {
-        transform: scaleY(-1) translateX(24.8rem);
+        transform: scaleY(-1) translateX(24.8em);
         opacity: 0;
     }
 }
+
 
 /* Theme switcher icon */
 #theme-toggle {
