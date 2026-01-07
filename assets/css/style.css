@@ -364,6 +364,10 @@ footer strong {
     }
 }
 
+#welcome hgroup {
+    margin-bottom: 2.5rem;
+}
+
 /* Hero Footer Alignment */
 #welcome footer {
     text-align: right;
