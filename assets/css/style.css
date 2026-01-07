@@ -182,6 +182,17 @@ main {
     filter: none !important;
 }
 
+[role="button"] {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+details summary::after {
+    background-position: center center !important;
+}
+
 [data-theme="dark"] .icon {
     filter: invert(65%) sepia(61%) saturate(464%) hue-rotate(139deg) brightness(85%) contrast(89%);
 }
