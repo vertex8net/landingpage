@@ -384,8 +384,7 @@ details[open].wechat-container>summary {
 }
 
 details.wechat-container>summary[role="button"] {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    background-color: transparent;
 }
 
 .wechat-tooltip {
