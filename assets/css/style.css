@@ -51,9 +51,9 @@
     --font-family: 'Metropolis', "Roboto", Arial, sans-serif;
     --pico-font-family: var(--font-family);
 
-    --vertex-light-primary: #00897b;
+    --vertex-light-primary: #009688;
     --vertex-light-inverse: #1F2121;
-    --vertex-dark-primary: #31B8C6;
+    --vertex-dark-primary: #009688;
     --vertex-dark-inverse: #fff;
 
     --vertex-font-bold: 700;
