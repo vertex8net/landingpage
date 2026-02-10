@@ -50,6 +50,7 @@
 :root {
     --font-family: 'Metropolis', "Roboto", Arial, sans-serif;
     --pico-font-family: var(--font-family);
+    --pico-font-size: 100%;
 
     --vertex-light-primary: #009688;
     --vertex-light-inverse: #1F2121;
