@@ -270,6 +270,24 @@ article:hover {
     border-color: rgba(0, 150, 136, 0.6) !important;
 }
 
+/* Showcase Image Styling */
+.showcase-image-wrapper {
+    margin-bottom: 2rem;
+    display: flex;
+}
+
+.showcase-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--vertex-border-radius);
+    border: 1px solid var(--card-border);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Horizontal flip and color adjustment */
+    transform: scaleX(-1);
+    filter: hue-rotate(-60deg) saturate(1.2) brightness(.7);
+}
+
 /* Entrance Animation Classes */
 .reveal {
     opacity: 0;
