@@ -52,6 +52,8 @@
     --pico-font-family: var(--font-family);
     --pico-font-size: 100%;
 
+    --pico-block-spacing-vertical: 0;
+
     --vertex-light-primary: #009688;
     --vertex-light-inverse: #1F2121;
     --vertex-dark-primary: #009688;
@@ -100,6 +102,8 @@ button,
 html {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
+    /* Fixing fixed header snap offset - standard CSS solution */
+    scroll-padding-top: 4.5rem;
 }
 
 body {
@@ -238,10 +242,6 @@ section {
     margin-top: 2rem;
 }
 
-main {
-    margin-top: 4rem;
-}
-
 /* Article / Content Box styling */
 article {
     border-radius: 1.5rem !important;
@@ -269,6 +269,20 @@ article:hover {
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Header Logo Reveal Effect */
+header .logo {
+    opacity: 0;
+    transform: translateX(-2rem);
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+}
+
+header.scrolled .logo {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
 }
 
 .logo {
