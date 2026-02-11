@@ -275,9 +275,9 @@ article {
 
 article:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 40px 10px rgba(0, 150, 136, 0.4), inset 0 0 20px rgba(0, 150, 136, 0.2) !important;
+    box-shadow: 0 0 25px 5px rgba(0, 150, 136, 0.3), inset 0 0 15px rgba(0, 150, 136, 0.15) !important;
     background: rgba(0, 150, 136, 0.1) !important;
-    border-color: rgba(0, 150, 136, 0.6) !important;
+    border-color: rgba(0, 150, 136, 0.5) !important;
 }
 
 /* Showcase Image Styling */
@@ -615,8 +615,8 @@ details.wechat-container>summary[role="button"] {
 }
 
 .orb-1 {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     background: var(--vertex-light-primary);
     top: 10%;
     left: 10%;
@@ -624,8 +624,8 @@ details.wechat-container>summary[role="button"] {
 }
 
 .orb-2 {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     background: #31b8c6;
     bottom: 20%;
     right: 10%;
@@ -634,8 +634,8 @@ details.wechat-container>summary[role="button"] {
 }
 
 .orb-3 {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     background: var(--pico-primary-focus);
     top: 40%;
     left: 50%;
