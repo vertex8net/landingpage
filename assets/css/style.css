@@ -52,10 +52,9 @@
     --pico-font-family: var(--font-family);
     --pico-font-size: 100%;
 
-    --vertex-light-primary: #009688;
-    --vertex-light-inverse: #1F2121;
+    --vertex-dark-background: #1F2121;
     --vertex-dark-primary: #009688;
-    --vertex-dark-inverse: #fff;
+    --vertex-dark-secondary: #fff;
 
     --vertex-font-bold: 700;
     --vertex-font-regular: 400;
@@ -66,17 +65,17 @@
 
     --pico-primary: var(--vertex-dark-primary);
     --pico-primary-hover: var(--vertex-dark-primary);
-    --pico-primary-hover-background: var(--vertex-light-primary);
+    --pico-primary-hover-background: var(--vertex-dark-primary);
     --pico-primary-background: var(--vertex-dark-primary);
     --pico-primary-focus: #31b8c620;
-    --pico-primary-inverse: var(--vertex-dark-inverse);
+    --pico-primary-inverse: var(--vertex-dark-secondary);
 
     --card-bg: rgba(31, 33, 33, 0.4);
     --card-border: rgba(255, 255, 255, 0.1);
 
     --page-grid-color: rgba(255, 255, 255, 0.1);
 
-    background-color: var(--vertex-light-inverse);
+    background-color: var(--vertex-dark-background);
 }
 
 button,
@@ -578,7 +577,7 @@ details.wechat-container>summary[role="button"] {
     z-index: -1;
     overflow: hidden;
     pointer-events: none;
-    background-color: var(--vertex-light-inverse);
+    background-color: var(--vertex-dark-background);
 }
 
 .grid-overlay {
@@ -604,7 +603,7 @@ details.wechat-container>summary[role="button"] {
 .orb-1 {
     width: 300px;
     height: 300px;
-    background: var(--vertex-light-primary);
+    background: var(--vertex-dark-primary);
     top: 10%;
     left: 10%;
     animation-duration: 25s;
