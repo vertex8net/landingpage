@@ -346,7 +346,7 @@ header.scrolled .logo {
     display: inline-block;
     flex-shrink: 0;
     /* Brand Green #009688 for Dark Mode */
-    filter: invert(41%) sepia(91%) saturate(3015%) hue-rotate(143deg) brightness(98%) contrast(101%);
+    filter: invert(41%) sepia(91%) saturate(3015%) hue-rotate(151deg) brightness(83%) contrast(101%);
 }
 
 [role="button"]>.icon {
