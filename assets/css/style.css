@@ -271,27 +271,33 @@ article:hover {
 }
 
 /* Showcase Image Styling */
-.showcase-image-wrapper {
+.image-col {
     margin-bottom: 2rem;
     display: flex;
-}
-
-.showcase-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+    overflow: hidden;
     border-radius: var(--vertex-border-radius);
     border: 1px solid var(--card-border);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    /* Horizontal flip and color adjustment */
+}
+
+.image-col img {
     transform: scaleX(-1);
     filter: hue-rotate(-60deg) saturate(1.2) brightness(.7);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.5s ease;
+}
+
+.image-col:hover img {
+    transform: scaleX(-1) scale(1.05);
 }
 
 /* Entrance Animation Classes */
 .reveal {
     opacity: 0;
     transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .reveal.active {
