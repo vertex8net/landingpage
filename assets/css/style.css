@@ -63,10 +63,7 @@
     --vertex-border-radius: 1.5rem;
 
     --card-bg-filter: blur(200px);
-}
 
-[data-theme="dark"],
-:root:not([data-theme="light"]) {
     --pico-primary: var(--vertex-dark-primary);
     --pico-primary-hover: var(--vertex-dark-primary);
     --pico-primary-hover-background: var(--vertex-light-primary);
