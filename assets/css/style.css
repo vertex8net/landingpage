@@ -76,6 +76,8 @@
 
     --card-bg: rgba(255, 255, 255, 0.7);
     --card-border: rgba(255, 255, 255, 0.3);
+
+    --page-grid-color: rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="dark"],
@@ -89,6 +91,8 @@
 
     --card-bg: rgba(31, 33, 33, 0.4);
     --card-border: rgba(255, 255, 255, 0.1);
+
+    --page-grid-color: rgba(255, 255, 255, 0.1);
 
     background-color: var(--vertex-light-inverse);
 }
@@ -108,6 +112,9 @@ html {
 body {
     font-family: var(--font-family);
     margin: 0;
+    min-height: 100vh;
+    position: relative;
+    background-color: transparent;
 }
 
 body>main {
@@ -186,6 +193,9 @@ section {
     padding-top: 15vh;
     position: relative;
     overflow: hidden;
+    /* Smooth fade at the bottom to merge with the rest of the page */
+    -webkit-mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
 }
 
 #welcome::before,
@@ -601,4 +611,84 @@ details.wechat-container>summary[role="button"] {
     margin: 0 auto;
     color: #333;
     font-size: 0.8rem;
+}
+
+/* Ambient Background System */
+.ambient-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+    background-color: var(--vertex-light-inverse);
+}
+
+.grid-overlay {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(var(--page-grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--page-grid-color) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.7;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 20%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%);
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    animation: floatAmbient 20s infinite ease-in-out alternate;
+}
+
+.orb-1 {
+    width: 400px;
+    height: 400px;
+    background: var(--vertex-light-primary);
+    top: 10%;
+    left: 10%;
+    animation-duration: 25s;
+}
+
+.orb-2 {
+    width: 300px;
+    height: 300px;
+    background: #31b8c6;
+    bottom: 20%;
+    right: 10%;
+    animation-duration: 30s;
+    animation-delay: -5s;
+}
+
+.orb-3 {
+    width: 200px;
+    height: 200px;
+    background: var(--pico-primary-focus);
+    top: 40%;
+    left: 50%;
+    animation-duration: 35s;
+    animation-delay: -10s;
+}
+
+@keyframes floatAmbient {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+
+    100% {
+        transform: translate(10px, -10px) scale(1);
+    }
 }
