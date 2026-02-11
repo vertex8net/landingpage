@@ -61,6 +61,8 @@
     --vertex-font-light: 300;
     --vertex-border-radius: 1.5rem;
 
+    --menu-height: 5rem;
+
     --card-bg-filter: blur(20px);
 
     --pico-primary: var(--vertex-dark-primary);
@@ -104,7 +106,7 @@ body>main {
 
 /* Site header fixed at the top */
 body>header {
-    padding: 1.5rem 0;
+    padding: 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -113,6 +115,9 @@ body>header {
     border-bottom: none;
     background: transparent;
     transition: background 0.3s ease;
+
+    height: var(--menu-height);
+    display: flex;
 }
 
 body>header.scrolled {
@@ -154,7 +159,7 @@ article h4 {
 }
 
 section {
-    min-height: 100vh;
+    min-height: calc(100vh - var(--menu-height));
     display: flex;
     flex-direction: column;
     justify-content: center;
