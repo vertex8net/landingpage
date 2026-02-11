@@ -167,6 +167,11 @@ article>header h3 {
     font-size: 1.25rem;
 }
 
+article h4 {
+    font-size: 1rem;
+    font-weight: var(--vertex-font-bold);
+}
+
 section {
     min-height: 100vh;
     display: flex;
