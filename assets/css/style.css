@@ -61,7 +61,7 @@
     --vertex-font-light: 300;
     --vertex-border-radius: 1.5rem;
 
-    --card-bg-filter: blur(200px);
+    --card-bg-filter: blur(20px);
 
     --pico-primary: var(--vertex-dark-primary);
     --pico-primary-hover: var(--vertex-dark-primary);
