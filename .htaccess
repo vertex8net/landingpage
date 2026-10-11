@@ -1,0 +1,10 @@
+# Vertex8 — Apache configuration
+
+# Never expose directory contents.
+Options -Indexes
+
+# Send every 404 (Not Found) to the site root.
+ErrorDocument 404 /
+
+# Default document for the site root.
+DirectoryIndex index.html
